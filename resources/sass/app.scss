@@ -1,0 +1,39 @@
+@import '~bootstrap/scss/bootstrap';
+@import 'variables';
+@import '~jquery-ui/themes/base/all.css';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+.error {
+  color: $red;
+}
+
+table {
+  .active {
+    color: $green;
+  }
+  .inactive{
+    color: $blue;
+  }
+  .locked {
+    color: $red;
+  }
+  .await {
+    color: $blue;
+  }
+  .processing {
+    color: $orange;
+  }
+  .success {
+    color: $green
+  }
+  .failed {
+    color: $red;
+  }
+  .client-transactions {
+    margin-bottom: 0;
+  }
+}
+
