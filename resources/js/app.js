@@ -96,11 +96,14 @@ $( document ).ready(function() {
         }
 
         $.each(data, function(index, value) {
+
+            var operation = (value.operation == 'withdraw') ? '-' : '';
+            console.log(operation);
             body += (
                 '<tr>\n' +
                 '<th scope="row">' + value.id + '</th>\n' +
                 '<td>' + value.type + '</td>\n' +
-                '<td>' + value.sum + '</td>\n' +
+                '<td>' + operation + value.sum + '</td>\n' +
                 '<td class="' + value.status + '">' + value.status + '</td>\n' +
                 '<td>' + value.created_at + '</td>\n' +
                 '</td>\n' +

@@ -11,8 +11,8 @@ class ClientSeeder extends Seeder
 {
     public function run()
     {
-        factory(Client::class, 1)->create()->each(function (Client $client) {
-            $client->payments()->saveMany(factory(Transaction::class, 10)->make());
+        factory(Client::class, 100000)->create()->each(function (Client $client) {
+            $client->transaction()->saveMany(factory(Transaction::class, 10)->make());
         });
     }
 }

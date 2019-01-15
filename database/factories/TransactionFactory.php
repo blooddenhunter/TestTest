@@ -13,7 +13,7 @@ $factory->define(Transaction::class, function (Faker $faker) {
     return [
         'type' => $faker->randomElement(EnumTransactionType::getValues()),
         'sum' => 10,
-        'status' => $faker->randomElement(EnumTransactionStatus::getValues()),
+        'status' => $faker->randomElement([EnumTransactionStatus::SUCCESS, EnumTransactionStatus::FAILED]),
         'operation' => $faker->randomElement(EnumTransactionOperation::getValues()),
         'created_at' => $date,
         'updated_at' => $date
